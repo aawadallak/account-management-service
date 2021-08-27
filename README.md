@@ -1,9 +1,9 @@
 <p align="center">
- <a href="#--about-the-project">About</a> • 
- <a href="#--used-technologies">Used Technologies</a> • 
+ • 
+ <a href="#-about-the-project">About</a> • 
+ <a href="#-used-technologies">Used Technologies</a> • 
  <a href="#-how-to-contribute-to-the-project">How to contribute to the project?</a> • 
- <a href="#-author">Author</a> • 
- <a href="#user-content--license">License</a>
+ <a href="#-author">Author</a>
 </p>
 
 <hr />
@@ -14,7 +14,7 @@
 
 The project is complete autenticathion service where user can create an account, login with username
 and password, change email or password, furthermore can recover his account. The principal ideia was use
-Apache Kafka message service to cross information between the services, some routes in the API write in a topic from Kafka, which is consumed from another micro-serivce (you can check it here).
+Apache Kafka message service to cross information between the services, some routes in the API write in a topic from Kafka, which is consumed from another micro-serivce (you can check it [Here](https://github.com/aawadallak/Email-dispatcher-service)).
 
 When an user is going to be created, a random verify code is generated and send to a Redis database, which will
 be auto-excluded in five minutes in purpose to have a low cache of keys on redis, and user can't utilize that code in another moment. The User information is stored in a PostgreSQL database.
