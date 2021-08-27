@@ -1,0 +1,57 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: _go.dockerfile
+      target: builder
+    image: go-image
+    container_name: go-container
+    environment:
+      HOST: "${HOST}"
+      PORT: "${PORT}"
+      DB_USER: "${DB_USER}"
+      DB_NAME: "${DB_NAME}"
+      DB_PASS: "${DB_PASS}"
+      GIN_MODE: "${GIN_MODE}"
+      TZ: "${TZ}"
+    volumes:
+      - .:/go/src/app
+    ports:
+      - 5000:5000
+    networks:
+      - api-go-web
+    links:
+      - postgres-db
+
+  postgres-db:
+    image: postgres
+    tty: true
+    container_name: postgress-container
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "${DB_NAME}"
+      POSTGRES_USER: "${DB_USER}"
+      POSTGRES_PASSWORD: "${DB_PASS}"
+    volumes:
+      - web-api:/var/lib/postgresql/data
+    networks:
+      - api-go-web
+
+  redis:
+    image: redis
+    command: redis-server
+    ports:
+      - "6379:6379"
+    networks:
+      - api-go-web
+
+networks:
+  api-go-web:
+    driver: bridge
+
+volumes:
+  web-api:
+    driver: local

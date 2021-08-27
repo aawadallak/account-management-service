@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+  zk:
+    image: confluentinc/cp-zookeeper:${CP_VERSION:-5.2.2}
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+  kafka:
+    image: confluentinc/cp-kafka:${CP_VERSION:-5.2.2}
+    ports:
+      - 9092:9092
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx512m
+      KAFKA_ZOOKEEPER_CONNECT: zk:2181
+      KAFKA_ADVERTISED_LISTENERS: EXTERNAL://localhost:9092,INTERNAL://kafka:9093
+      KAFKA_LISTENERS: EXTERNAL://0.0.0.0:9092,INTERNAL://0.0.0.0:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_HOURS: 1
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: EXTERNAL:PLAINTEXT,INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      # some loggers are set to TRACE by default...and they're noisy
+      KAFKA_LOG4J_LOGGERS: kafka.controller=INFO,state.change.logger=INFO
+    volumes:
+      - kafka:/var/lib/kafka/data
+
+volumes:
+  kafka:
