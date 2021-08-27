@@ -46,18 +46,19 @@ To develop the micro service was utilized the following tecs:
 
 ## 👨🏻‍🎓 Author
 
-<a href="[https://github.com/aawadallak](https://github.com/aawadallak)">
-<img style="border-radius: 50%;" src="[https://avatars.githubusercontent.com/u/74802742?v=4](https://avatars.githubusercontent.com/u/74802742?v=4)" width="100px;" alt=""/>
+<a href="https://github.com/aawadallak">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74802742?v=4" width="100px;" alt=""/>
 </a>
 
-Send me a message and i'll be glad to help you. 😄
+Send me a message and i'll be happy to help you. 😄
 
-[https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=http](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=http)
+[![Youtube Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=http)](mailto:alexandre.awadallak@gmail.com)
 
-[https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/alexandre-yasser-awadallak-1900951b0/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/alexandre-yasser-awadallak-1900951b0/)
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/alexandre-yasser-awadallak-1900951b0/)](https://www.linkedin.com/in/alexandre-awadallak)
 
-[https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&link=https://t.me/aawadallak](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&link=https://t.me/aawadallak)
+[![Telegram Badge](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&link=https://t.me/aawadallak)](https://t.me/aawadallak)
 
-## 📝 Licença
 
-This project is under license [MIT](https://www.notion.so/LICENSE).
+## 📝 License
+
+This project is under license [MIT](./LICENSE).
